@@ -1,89 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Story Game</title>
-
-<style>
-body{
-    background:#111;
-    color:#00ff88;
-    font-family:Courier New, monospace;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    margin:0;
-}
-
-.container{
-    text-align:center;
-    max-width:700px;
-    padding:20px;
-}
-
-#question{
-    font-size:2rem;
-    margin-bottom:30px;
-    min-height:80px;
-}
-
-button{
-    background:transparent;
-    border:2px solid #00ff88;
-    color:#00ff88;
-    padding:12px 25px;
-    margin:10px;
-    font-size:1.1rem;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-button:hover{
-    background:#00ff88;
-    color:#111;
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-    <div id="question"></div>
-    <div id="choices"></div>
-</div>
-
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
 const story = {
     start: {
-        text: "Are you broken?",
+        text: "Are you broken? OFC, YOU MUST BE!!!",
         choices: [
             { text: "Yes", next: "broken" },
-            { text: "No", next: "broken" }
+            { text: "Yes", next: "broken" }
         ]
     },
 
     broken: {
-        text: "Who left? You or her?",
+        text: "Who left??? You or she? OFC, IT MUST BE HER",
         choices: [
             { text: "Her", next: "sheLeft" },
-            { text: "Me", next: "sheLeft" }
+            { text: "Her", next: "sheLeft" }
         ]
     },
 
-    sheLeft: {
-        text: "Focus on yourself. It's going to be okay.",
+    "She left": {
+        text: "Just focus in your own life, bro... They're not worth it.",
         choices: [
-            { text: "Restart", next: "start" },
-            { text: "I'm okay now", next: "bye" }
+            { text: "It's okay not to be fine... just for tonight", next: "start" },
+            { text: "I'm good now. Starting from now, I'll focus on myself.", next: "bye"} 
         ]
     },
 
     bye: {
-        text: "Take care of yourself.",
+        text: "BYE, NIGGAS",
         choices: [
             { text: "Restart", next: "start" }
         ]
@@ -111,6 +55,3 @@ showNode("start");
 
 });
 </script>
-
-</body>
-</html>
