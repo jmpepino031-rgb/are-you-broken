@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interactive Story</title>
+<title>are you fucking saddd???????</title>
 
 <style>
 body{
@@ -56,58 +56,38 @@ button:hover{
 <script>
 const story = {
     start: {
-        text: "Are you broken?",
+        text: "Are you broken? OFC, YOU MUST BE!!!",
         choices: [
             { text: "Yes", next: "broken" },
-            { text: "No", next: "notBroken" }
+            { text: "Yes", next: "broken" }
         ]
     },
 
     broken: {
-        text: "Can you fix it?",
+        text: "Who left??? You or she? OFC, IT MUST BE HER",
         choices: [
-            { text: "Yes", next: "fixable" },
-            { text: "No", next: "accept" }
+            { text: "Her", next: "She left" },
+            { text: "Her", next: "She left" }
         ]
     },
 
-    notBroken: {
-        text: "Then why are you here?",
+
+    She left: {
+        text: "Just focus in your own life, bro... They're not worth it.",
         choices: [
-            { text: "Curious", next: "curious" },
-            { text: "Just bored", next: "bored" }
+            { text: "It's okay not to be fine... just for tonight", next: "start" }
+            { text: "I'm good now. Starting from now, I'll focus on myself.", next: "bye"} 
         ]
     },
 
-    fixable: {
-        text: "Then why worry?",
+    bye: {
+        text: "BYE, NIGGAS",
         choices: [
             { text: "Restart", next: "start" }
         ]
     },
 
-    accept: {
-        text: "Then why worry about it?",
-        choices: [
-            { text: "Restart", next: "start" }
-        ]
-    },
-
-    curious: {
-        text: "Curiosity is the beginning of understanding.",
-        choices: [
-            { text: "Restart", next: "start" }
-        ]
-    },
-
-    bored: {
-        text: "Maybe boredom is just curiosity waiting for a challenge.",
-        choices: [
-            { text: "Restart", next: "start" }
-        ]
-    }
-};
-
+    
 const question = document.getElementById("question");
 const choices = document.getElementById("choices");
 
