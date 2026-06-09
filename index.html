@@ -13,8 +13,8 @@ const story = {
     broken: {
         text: "Who left??? You or she? OFC, IT MUST BE HER",
         choices: [
-            { text: "Her", next: "sheLeft" },
-            { text: "Her", next: "sheLeft" }
+            { text: "Her", next: "She left" },
+            { text: "Her", next: "She left" }
         ]
     },
 
@@ -39,6 +39,11 @@ const choices = document.getElementById("choices");
 
 function showNode(nodeName){
     const node = story[nodeName];
+
+    if (!node) {
+        question.textContent = "Error: Story node not found → " + nodeName;
+        return;
+    }
 
     question.textContent = node.text;
     choices.innerHTML = "";
